@@ -1,0 +1,30 @@
+DISCIPLINA: JAVASCRIPT 
+CODIGO TURMA: 123-89719
+NOME: LUANA FERREIRA BARBOSA 
+MATRICULA : 2024100253
+
+
+
+def isPrime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def findLargestPrimes():
+    num = int(input("Digite um número para começar a busca: "))
+    prime_count = 0
+    largest_primes = []
+
+    while prime_count < 10:
+        if isPrime(num):
+            largest_primes.append(num)
+            prime_count += 1
+        num += 1
+
+    print("Os 10 maiores números primos a partir de", num - prime_count, "são:")
+    print(largest_primes)
+
+findLargestPrimes()
